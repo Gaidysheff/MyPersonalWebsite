@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static 'CurriculumVitae/css/styles.css' %}" rel="stylesheet" />
+    <link
+      rel="shortcut #A0BEC4"
+      href="{% static 'CurriculumVitae/images/favicon.ico' %}"
+      type="image.png"
+    />
+  </head>
+
+  <body>
+    <!-- ---------------- Main Menu Navbar---------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container" style="margin-left: 5px">
+        <!-- Заменить потом ссылку на favicon на страничку создателя сайта -->
+        <a class="navbar-brand" href="{% url 'home' %}"
+          ><img src="/static/blogging/images/favicon-32x32.png" alt="My logo" />
+          My CV</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        {% comment "future buttons" %}
+        <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
+          {% block mainmenu %}
+          <ul id="mainmenu" class="navbar-nav ml-auto">
+            {% for m in menu %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url m.url_name %}">{{m.title}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endblock mainmenu %}
+        </div>
+      </div>
+
+      <div>
+        <ul id="mainmenu" class="navbar-nav ml-auto">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'logout' %}"
+              >{{ user.username }} Выйти</a
+            >
+          </li>
+          {% else %}
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'signup' %}">Регистрация</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'login' %}">| Войти</a>
+          </li>
+          {% endif %}
+          <li class="nav-item active">
+            <a class="nav-link">| {{ user.email }}</a>
+          </li>
+        </ul>
+      </div> -->
+      
+      {% endcomment %}
+    </nav>
+      
+    {% block content %} {%endblock content %}
+
+    <!-- ---------------------Pagination------------------------------- -->
+
+    {% if page_obj.has_other_pages %}
+    <nav aria-label="...">
+      <ul class="pagination justify-content-center mb-0 flex-wrap">
+        <!-- -------------------------------------кнопка назад---------------------------------- -->
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="?page={{ page_obj.previous_page_number }}"
+            tabindex="-1"
+            >&lt; Предыдущая</a
+          >
+        </li>
+        {% endif %}
+        <!-- ----------------------Текущая +/- 1 страница ---------------------------------- -->
+        {% for p in paginator.page_range %} {% if page_obj.number == p %}
+        <li class="page-item active">
+          <a class="page-link" href="?page={{ p }}"
+            >{{ p }}<span class="sr-only"> (текущая)</span></a
+          >
+        </li>
+        {% elif p >= page_obj.number|add:-1 and p <= page_obj.number|add:1 %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+        </li>
+        {% endif %} {% endfor %}
+        <!-- --------------------------------------кнопка вперёд--------------------------------- -->
+        {% if page_obj.has_next %}
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="?page={{ page_obj.next_page_number }}"
+            tabindex="-1"
+            >Следующая &gt;</a
+          >
+        </li>
+        {% endif %}
+        <!-- ------------------------------------------------------------------------------------ -->
+      </ul>
+    </nav>
+    {% endif %}
+  </body>
+</html>
