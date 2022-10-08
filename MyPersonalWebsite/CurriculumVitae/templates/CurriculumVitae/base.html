@@ -38,45 +38,33 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        {% comment "future buttons" %}
-        <!-- <div class="collapse navbar-collapse" id="navbarResponsive">
-          {% block mainmenu %}
+
+    <!-- ---------------- Main Menu Navbar (LEFT PART)---------------------- -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          {% block mainmenu_left %}
           <ul id="mainmenu" class="navbar-nav ml-auto">
-            {% for m in menu %}
+            {% for m in menu_1 %}
             <li class="nav-item active">
               <a class="nav-link" href="{% url m.url_name %}">{{m.title}}</a>
             </li>
             {% endfor %}
           </ul>
-          {% endblock mainmenu %}
+          {% endblock mainmenu_left %}
         </div>
       </div>
-
-      <div>
-        <ul id="mainmenu" class="navbar-nav ml-auto">
-          {% if request.user.is_authenticated %}
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'logout' %}"
-              >{{ user.username }} Выйти</a
-            >
-          </li>
-          {% else %}
-        </ul>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'signup' %}">Регистрация</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'login' %}">| Войти</a>
-          </li>
-          {% endif %}
-          <li class="nav-item active">
-            <a class="nav-link">| {{ user.email }}</a>
-          </li>
-        </ul>
-      </div> -->
-      
-      {% endcomment %}
+    <!-- ---------------- Main Menu Navbar (RIGHT PART)---------------------- -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          {% block mainmenu_right %}
+          <ul id="mainmenu" class="navbar-nav mr-auto">
+            {% for m in menu_2 %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url m.url_name %}">{{m.title}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endblock mainmenu_right %}
+        </div>
+      </div>
     </nav>
       
     {% block content %} {%endblock content %}
@@ -126,3 +114,8 @@
     {% endif %}
   </body>
 </html>
+
+
+{% comment "future buttons" %}
+Something to comment
+{% endcomment %}
