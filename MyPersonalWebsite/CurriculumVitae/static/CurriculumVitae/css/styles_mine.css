@@ -1,4 +1,4 @@
-p {
+#p {
   color: rgb(140, 0, 222);
   width: 400px;
   border: 1px solid black;
@@ -29,6 +29,17 @@ p {
   letter-spacing: 10px;
 }
 
+.font-dancing-title {
+  font-family: "Dancing Script";
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.font-dancing {
+  font-family: "Dancing Script";
+  font-size: 20px;
+}
+
 img.img1 {
   max-width: 600px;
   height: auto;
@@ -45,4 +56,23 @@ img.img2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   padding: 0.3em;
   margin-bottom: 1em;
+}
+.centre_img {
+  max-width: 600px;
+  height: auto;
+  border-radius: 5%;
+  align-self: center; /* Выравнивание по центру */
+  margin: 10px 10px 10px 0;
+}
+.left_img {
+  max-width: 300px;
+  height: auto;
+  float: left; /* Выравнивание по левому краю */
+  margin: 10px 10px 10px 0;
+}
+.right_img {
+  max-width: 300px;
+  height: auto;
+  float: right; /* Выравнивание по правому краю  */
+  margin: 10px 0 10px 10px;
 }
