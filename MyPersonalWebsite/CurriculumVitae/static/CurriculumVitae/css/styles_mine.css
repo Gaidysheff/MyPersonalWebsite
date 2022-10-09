@@ -1,0 +1,48 @@
+p {
+  color: rgb(140, 0, 222);
+  width: 400px;
+  border: 1px solid black;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.my-class {
+  color: red;
+}
+
+.font-pacifico {
+  font-family: "Pacifico";
+  font-size: 48px;
+  text-align: center;
+  color: rgb(102, 0, 255);
+  line-height: 3;
+  /* letter-spacing: 2px; */
+}
+
+.font-rubik {
+  font-family: "Rubik Wet Paint";
+  font-size: 60px;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  line-height: 2;
+  letter-spacing: 10px;
+}
+
+img.img1 {
+  max-width: 600px;
+  height: auto;
+}
+
+img.img2 {
+  display: block;
+  margin: 0 auto;
+}
+
+.rounded-img {
+  width: 60%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  padding: 0.3em;
+  margin-bottom: 1em;
+}
