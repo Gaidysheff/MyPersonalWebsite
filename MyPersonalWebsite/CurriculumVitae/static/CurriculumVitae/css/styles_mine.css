@@ -22,7 +22,7 @@
 
 .font-rubik {
   font-family: "Rubik Wet Paint";
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
   color: rgb(255, 0, 0);
   line-height: 2;
@@ -51,7 +51,10 @@ img.img2 {
 }
 
 .rounded-img {
-  width: 60%;
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   padding: 0.3em;
@@ -75,4 +78,134 @@ img.img2 {
   height: auto;
   float: right; /* Выравнивание по правому краю  */
   margin: 10px 0 10px 10px;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+h1 {
+  font-family: "Rye";
+  font-size: 60px;
+  color: #564c4a;
+  font-weight: 300;
+  padding-left: 20px;
+}
+h2 {
+  font-family: "Cabin Sketch";
+  color: #b00d22;
+  font-size: 36px;
+  font-weight: 500;
+  clear: both; /* отменяем обтекание с обеих сторон */
+  padding: 1em 0 0.25em;
+  border-bottom: 2px solid;
+  counter-increment: h2; /* задаем увеличение нумерации заголовков h2 на единицу */
+  padding-left: 20px;
+}
+h2:before {
+  content: " " counter(h2) ". "; /* добавляем в начале каждого заголовка текущее значение счетчика и точку с пробелом */
+}
+p {
+  font-family: arial;
+  color: #785f5b;
+  line-height: 1.3;
+}
+
+ol {
+  font-family: "Grand Hotel";
+  font-size: 20px;
+  color: #785f5b;
+  line-height: 1.3;
+}
+
+/********** картинка слева **********/
+.left {
+  float: left;
+  margin: 0 3em 3em 0;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/********** картинка справа **********/
+.right {
+  float: right;
+  margin: 0 0 1em 0;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+/********** картинка между текста **********/
+.columns {
+  float: left;
+  max-width: 30%;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Sarina";
+  font-size: 20px;
+  text-align: justify;
+}
+.img-center {
+  float: left;
+  margin: 0 1.5% 0 1.5%;
+  max-width: 37%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/********** картинка по центру********* */
+.center {
+  display: block;
+  margin: 0 auto 1.5%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card {
+  border-radius: 3%;
+}
+
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nice_place {
+  padding-left: 20px;
+  font-family: "Montez";
+  font-size: 28px;
+}
+
+/* ===================================================================== */
+
+.wrap {
+  font-size: 18px;
+  width: 95%;
+  margin: 50px auto;
+  position: relative;
+}
+img.img3 {
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 46%;
+  margin-left: -125px;
+}
+.left_column {
+  float: left;
+  width: 49%;
+  text-align: justify;
+}
+.right_column {
+  float: right;
+  width: 49%;
+  text-align: justify;
+}
+.left_column:before,
+.right_column:before {
+  content: "";
+  width: 215px;
+  height: 290px;
+}
+.left_column:before {
+  float: right;
+}
+.right_column:before {
+  float: left;
 }
