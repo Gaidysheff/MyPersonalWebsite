@@ -9,6 +9,15 @@
 
 .my-class {
   color: red;
+  background: rgba(245, 37, 37, 0.267);
+  font-family: "Pacifico";
+}
+
+.nav-main-top {
+  background: rgba(245, 37, 37, 0.267);
+  font-family: "Pacifico";
+  padding: 10px 50px;
+  color: rgb(148, 0, 0);
 }
 
 .font-pacifico {
@@ -16,8 +25,7 @@
   font-size: 48px;
   text-align: center;
   color: rgb(102, 0, 255);
-  line-height: 3;
-  /* letter-spacing: 2px; */
+  line-height: 3; /* letter-spacing: 2px; */
 }
 
 .font-rubik {
@@ -60,6 +68,11 @@ img.img2 {
   padding: 0.3em;
   margin-bottom: 1em;
 }
+
+/* ======================================*/
+
+/* ======================================*/
+
 .centre_img {
   max-width: 600px;
   height: auto;
