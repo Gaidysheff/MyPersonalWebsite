@@ -280,17 +280,18 @@ img.img3 {
   background: #eee;
   border-right: 1px solid #ccc;
   min-height: 100%;
+  /* position: fixed; Замораживает меню */
 }
 .left-chapters ul {
   width: 230px;
   min-height: 100%;
   margin: 0;
-  padding: 20px 10px 10px 20px;
+  padding: 100px 10px 10px 20px;
   list-style: none;
   font-size: 20px;
 }
 .left-chapters ul li {
-  margin: 30px 0 0 0;
+  margin: 20px 0 0 0;
   color: #999;
 }
 .left-chapters ul li.selected {
@@ -326,7 +327,10 @@ img.img3 {
   background: url("../images/share_yt.png") no-repeat 0 -30px;
 }
 .content {
-  padding: 40px 20px 20px 40px;
+  padding: 80px 20px 20px 40px;
+  /* margin-top: 80px; */
   width: 100%;
   box-sizing: border-box;
 }
+
+/*=======================================================*/
