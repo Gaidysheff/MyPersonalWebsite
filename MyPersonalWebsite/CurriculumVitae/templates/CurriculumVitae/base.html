@@ -13,16 +13,14 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'CurriculumVitae/css/styles.css' %}" rel="stylesheet">
     <!-- <link href="{% static 'CurriculumVitae/css/styles2.css' %}" rel="stylesheet"> -->
-    <link href="{% static 'CurriculumVitae/css/styles_mine.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'CurriculumVitae/css/styles_mine.css' %}"type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik+Wet+Paint">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rye&family=Grand+Hotel">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Montez&family=Sarina">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia">
-    <link
-      rel="shortcut #A0BEC4"
-      href="{% static 'CurriculumVitae/images/favicon.ico' %}"
-      type="image.png" />
+
     <!-- ---------------- Favicon---------------------- -->
+    <link href="{% static 'CurriculumVitae/images/favicon.ico' %}" type="image.png"/>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/CurriculumVitae/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/CurriculumVitae/images/favicon-16x16.png.png">
@@ -35,7 +33,7 @@
   
   <body>
     <!-- ---------------- Main Menu Navbar---------------------- -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="position: fixed; top: 0; width: 100%;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="position: fixed; top: 0; width: 100%; z-index: 777;">
       <div class="container" style="margin-left: 5px">
         <!-- Заменить потом ссылку на favicon на страничку создателя сайта -->
         <a class="navbar-brand" href="{% url 'home' %}"

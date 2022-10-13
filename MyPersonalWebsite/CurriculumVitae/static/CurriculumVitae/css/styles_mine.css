@@ -280,7 +280,8 @@ img.img3 {
   background: #eee;
   border-right: 1px solid #ccc;
   min-height: 100%;
-  /* position: fixed; Замораживает меню */
+  /* position: fixed;  */
+  /* Замораживает меню */
 }
 .left-chapters ul {
   width: 230px;
@@ -289,6 +290,7 @@ img.img3 {
   padding: 100px 10px 10px 20px;
   list-style: none;
   font-size: 20px;
+  position: fixed;
 }
 .left-chapters ul li {
   margin: 20px 0 0 0;
@@ -333,4 +335,24 @@ img.img3 {
   box-sizing: border-box;
 }
 
-/*=======================================================*/
+/*========== Кнопка вернуться назад ==========================*/
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: 2px;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}

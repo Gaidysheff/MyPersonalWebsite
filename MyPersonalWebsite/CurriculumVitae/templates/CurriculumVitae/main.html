@@ -1,5 +1,7 @@
 
-{% extends 'CurriculumVitae\base.html' %} {% block content %}
+{% extends 'CurriculumVitae\base.html' %}   {% block content %}{% load static %}
+
+<link href="{% static 'CurriculumVitae/css/styles_mine.css' %}" rel="stylesheet" type="text/css">
 
     <!-- ---------------------------------------------------------------------------->
     <nav>
@@ -208,6 +210,30 @@
       </div>
     </div>
   </div>
+
+  
+  <button onclick="topFunction()" type="button" class="btn btn-danger" title="Go to top">Вернуться Наверх</button>
+
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+
 
     <!-- ---------------------------------------------------------------------------->
     {% endblock content %}

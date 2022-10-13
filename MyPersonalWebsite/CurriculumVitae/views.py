@@ -1,9 +1,9 @@
-from django.views.generic.base import TemplateView
-from .utilities import DataMixin
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render
 from django.views import View
-from django.contrib.auth.views import LoginView
-from .utilities import menu_1, menu_2
+from django.views.generic.base import TemplateView
+
+from .utilities import DataMixin, menu_1, menu_2
 
 
 def index(request):

@@ -1,7 +1,30 @@
-<!DOCTYPE html>
-{% extends 'CurriculumVitae\base.html' %} {% block content %}
+{% extends 'CurriculumVitae\base.html' %} {% load static %} {% block content %}
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- ====================================================================================== -->
+
+  <!-- ---------------- Favicon---------------------- -->
+  <link
+    href="{% static 'CurriculumVitae/images/favicon.ico' %}"
+    type="image.png"
+  />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="static/CurriculumVitae/images/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="static/CurriculumVitae/images/favicon-16x16.png.png"
+  />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- ====================================================================================== -->
+
   <style>
     body,
     html {
